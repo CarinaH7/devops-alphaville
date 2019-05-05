@@ -2,23 +2,24 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Enkel Sample API
+#Parameters: 
 
-Parameters: 
-
-    codeUri: 
-      Type: "./scr"
+    #codeUri: 
+     # Type: "String"
+      #Value: "./src"
+      
     
 Resources:
-  API:
-    Type: AWS::Serverless::Api
-    Properties:
+ # API:
+  #  Type: AWS::Serverless::Api
+   # Properties:
 
   geohash:
     Type: AWS::Serverless::Function
     Properties:
     Handler: handler.py
     Runtime: python 3.7
-    CodeUri: codeUri
+    CodeUri: ./src
     MemorySize: 1024
     Timeout: 15
     PhotoUpload:
