@@ -3,6 +3,11 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Enkel Sample API
 
+Parameters: 
+
+    codeUri: 
+      Type: "./scr"
+    
 Resources:
   API:
     Type: AWS::Serverless::Api
@@ -11,3 +16,13 @@ Resources:
   geohash:
     Type: AWS::Serverless::Function
     Properties:
+    Handler: handler.py
+    Runtime: python 3.7
+    CodeUri: codeUri
+    MemorySize: 1024
+    Timeout: 15
+    PhotoUpload:
+      Type: S3
+      Properties:
+        Bucket: arn:aws:s3:::meetup18-cf-artifacts
+
