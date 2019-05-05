@@ -22,8 +22,4 @@ Resources:
         CodeUri: ./src
         MemorySize: 1024
         Timeout: 15
-        PhotoUpload:
-          Type: S3
-          Properties:
-            Bucket: arn:aws:s3:::meetup18-cf-artifacts
-
+        
