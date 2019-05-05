@@ -18,7 +18,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
         Handler: handler.py
-        Runtime: python 3.7
+        Runtime: python3.7
         CodeUri: ./src
         MemorySize: 1024
         Timeout: 15
