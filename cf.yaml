@@ -17,13 +17,13 @@ Resources:
   geohash:
     Type: AWS::Serverless::Function
     Properties:
-    Handler: handler.py
-    Runtime: python 3.7
-    CodeUri: ./src
-    MemorySize: 1024
-    Timeout: 15
-    PhotoUpload:
-      Type: S3
-      Properties:
-        Bucket: arn:aws:s3:::meetup18-cf-artifacts
+        Handler: handler.py
+        Runtime: python 3.7
+        CodeUri: ./src
+        MemorySize: 1024
+        Timeout: 15
+        PhotoUpload:
+          Type: S3
+          Properties:
+            Bucket: arn:aws:s3:::meetup18-cf-artifacts
 
